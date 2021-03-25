@@ -2,11 +2,12 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-const FirstStep = () => {
+const FirstStep = (props) => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
+    props.history.push("/second");
   };
 
   return (
